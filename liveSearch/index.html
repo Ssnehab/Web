@@ -1,0 +1,23 @@
+<head>
+<script>
+function loadDoc() {
+  var v=document.getElementById("t1").value;
+  var url="welcome.jsp?val="+v;
+  //alert(url);
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML=this.responseText;
+    }
+  };
+  xhttp.open("GET",url,true);
+  xhttp.send();
+}
+</script>
+</head>
+<body>
+<div id="demo"></div>
+<h2>Instant Login Feedback Form</h2>
+USER NAME: <input type="text" id="t1" onkeyup="loadDoc();"/>
+</body>
+</html>

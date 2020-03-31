@@ -1,0 +1,14 @@
+<web-app>
+
+<servlet>
+    <servlet-name>loginservlet</servlet-name>
+    <servlet-class>logincontroller</servlet-class> 
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>loginservlet</servlet-name>
+    <url-pattern>/logincontrol</url-pattern>
+</servlet-mapping>
+
+</web-app>
+
